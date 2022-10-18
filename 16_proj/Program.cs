@@ -13,12 +13,12 @@ int Find3Num (int num)
     {
         num = num / 10;
     }
-    int ThirdNum = num % 10;
-    if (ThirdNum < 0)
+    int thirdNum = num % 10;
+    if (thirdNum < 0)
     {
-        return -ThirdNum;
+        return -thirdNum;
     }
-    return ThirdNum;
+    return thirdNum;
 }
 
 Console.WriteLine("Введите число, лучше трехзначное (вдруг не сработает)");

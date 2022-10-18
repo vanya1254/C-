@@ -1,7 +1,7 @@
 ﻿int SecondNum (int num)
 {
-    int SecNum = (num % 100) / 10;
-    return SecNum;
+    int secNum = (num % 100) / 10;
+    return secNum;
 }
 
 Console.WriteLine("Введите число");
