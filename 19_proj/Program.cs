@@ -8,7 +8,7 @@
 }
 
 Console.WriteLine("Введите номер четверти");
-int quart_cons = Convert.ToInt32(Console.ReadLine());
+int quartCons = Convert.ToInt32(Console.ReadLine());
 
-string result = Quarter(quart_cons);
+string result = Quarter(quartCons);
 Console.WriteLine(result);
