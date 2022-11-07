@@ -1,10 +1,10 @@
 ﻿double DotsDistance (double xA, double yA, double zA, double xB , double yB, double zB)
 {
     double xBxA = xB - xA;
-    double yBxA = yB - yA;
+    double yByA = yB - yA;
     double zBzA = zB - zA;
 
-    double xY = Math.Sqrt((Math.Pow(xBxA, 2) + Math.Pow(yBxA, 2) + Math.Pow(zBzA, 2)));
+    double xY = Math.Sqrt((Math.Pow(xBxA, 2) + Math.Pow(yByA, 2) + Math.Pow(zBzA, 2)));
     return xY;
 }
 
