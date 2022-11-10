@@ -22,7 +22,7 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-bool FindNUmArray(int[] array, int num)
+bool FindNumArray(int[] array, int num)
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -37,7 +37,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 int[] arr = RndMass(12, -9, 9);
 PrintArray(arr);
 
-if (FindNUmArray(arr, number)) 
+if (FindNumArray(arr, number)) 
 {
     Console.WriteLine("Да");
 }
