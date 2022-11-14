@@ -2,10 +2,12 @@
 {
     int[] arrayFibonacci = new int[num];
     arrayFibonacci[1] = 1;
+
     for (int i = 2; i < num; i++)
     {
         arrayFibonacci[i] = arrayFibonacci[i - 1] + arrayFibonacci[i - 2];
     }
+    
     return arrayFibonacci;
 }
 

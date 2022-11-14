@@ -1,10 +1,4 @@
-﻿// Задача 37: Найдите произведение пар чисел в одномерном массиве.
-// Парой считаем первый и последний элемент, второй и предпоследний
-// и т.д. Результат запишите в новом массиве.
-// [1 2 3 4 5] -> 5 8 3
-// [6 7 3 6] -> 36 21
-
-int[] RndMass(int size, int mn, int mx)
+﻿int[] RndMass(int size, int mn, int mx)
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -30,34 +24,37 @@ void PrintArray(int[] array)
 
 int[] MultiArray(int[] array)
 {
-    int size;
+    int size = default;
 
     if (array.Length % 2 == 0)
     {
         size = array.Length / 2;
         int[] arrayMult = new int[size];
 
-        for (int i = 0; i < array.Length / 2; i++)
+        for (int i = 0; i < size; i++)
         {
-            arrayMult += array[i] * array[-1 - i];
+            arrayMult[i] = array[i] * array[array.Length - 1 - i];
         }
+
         return arrayMult;
     }
-
-    size = array.Length / 2 + 1;
-    int[] arrayMult = new int[size];
-
-    for (int i = 0; i < array.Length / 2; i++)
+    else
     {
-        arrayMult += array[i] * array[-1 - i];
-    }
-    arrayMult += array[array.Length / 2];
+        size = array.Length / 2 + 1;
+        int[] arrayMult = new int[size];
 
-    return arrayMult;
+        for (int i = 0; i < size; i++)
+        {
+            arrayMult[i] = array[i] * array[array.Length - 1 - i];
+        }
+        arrayMult[size - 1] = array[array.Length / 2];
+
+        return arrayMult;
+    }
 }
 
-int[] arr = RndMass(5, 1, 9);
+int[] arr = RndMass(7, 1, 9);
 PrintArray(arr);
 
-int multArr = MultiArray(arr);
-Console.WriteLine($"{multArr}");
+int[] multArr = MultiArray(arr);
+PrintArray(multArr);
