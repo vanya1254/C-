@@ -1,6 +1,7 @@
 ﻿int[] RndMass(int size, int mn, int mx)
 {
     int[] array = new int[size];
+
     Random rnd = new Random();
 
     for (int i = 0; i < size; i++)
@@ -22,19 +23,20 @@ void PrintArray(int[] array)
     Console.WriteLine("]");
 }
 
-void ReverseArray(int[] array)
+int[] CopyArray(int[] array)
 {
-    int temp = default;
-    
-    for (int i = 0; i < array.Length / 2; i++)
+    int[] newArray = new int[array.Length];
+
+    for (int i = 0; i < array.Length; i++)
     {
-        temp = array[i];
-        array[i] = array[array.Length - 1 - i];
-        array[array.Length - 1 - i] = temp;
+        newArray[i] = array[i];
     }
+
+    return newArray;
 }
 
-int[] arr = RndMass(5, 1, 9);
-PrintArray(arr);
-ReverseArray(arr);
-PrintArray(arr);
+int[] rndArr = RndMass(5, 1, 10);
+PrintArray(rndArr);
+Console.WriteLine();
+int[] copyArray = CopyArray(rndArr);
+PrintArray(copyArray);
