@@ -21,7 +21,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)                 // метод только для проверки работоспособности
         {
-            Console.Write($"{matrix[i, j], 5}  |");
+            Console.Write($"{matrix[i, j],5}  |");
         }
         Console.WriteLine();
     }
@@ -33,7 +33,7 @@ void FindElementMatrix(int[,] matrix)
     int row = Convert.ToInt32(Console.ReadLine());                   // решил оставить внутри метода ввод данных от пользователя
     int column = Convert.ToInt32(Console.ReadLine());
 
-    if (row > matrix.GetLength(0) - 1 || 
+    if (row > matrix.GetLength(0) - 1 ||
         column > matrix.GetLength(1) - 1 ||
         row < 0 || column < 0) Console.WriteLine("Такого элемента нет в массиве");
     else Console.WriteLine($"Число из массива с индексами [{row}, {column}] равно => {matrix[row, column]}");
